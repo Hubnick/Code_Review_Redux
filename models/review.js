@@ -6,7 +6,12 @@ var Html = sequelize.define("Html", {
         question: DataKinds.STRING,
         answer: DataKinds.STRING,
     }
+    
 });
+return Html;
+};
+
+module.exports = function(sequelize, DataTypes) {
 var Api = sequelize.define("Api", {
     cards: {
         id: DataKinds.STRING,
@@ -14,7 +19,10 @@ var Api = sequelize.define("Api", {
         answer: DataKinds.STRING
     }
 });
+return API;
+};
 
+module.exports = function(sequelize, DataTypes) {
 var Css = sequelize.define("Css", {
     cards: {
         //figure out how to properly write id
@@ -23,7 +31,10 @@ var Css = sequelize.define("Css", {
         answer: DataKinds.STRING
     }
 });
+return Css;
+};
 
+module.exports = function(sequelize, DataTypes) {
 var Git = sequelize.define("Git", {
     cards: {
         id: DataKinds.STRING,
@@ -31,7 +42,10 @@ var Git = sequelize.define("Git", {
         answer: DataKinds.STRING
     }
 });
+return Git;
+};
 
+module.exports = function(sequelize, DataTypes) {
 var JavaScript = sequelize.define("JavaScript", {
     cards: {
         //figure out how to properly write id
@@ -40,6 +54,10 @@ var JavaScript = sequelize.define("JavaScript", {
         answer: DataKinds.STRING
     }
 });
+return JavaScript;
+};
+
+module.exports = function(sequelize, DataTypes) {
 var JQuery = sequelize.define("JQuery", {
     cards: {
         id: DataKinds.STRING,
@@ -47,6 +65,7 @@ var JQuery = sequelize.define("JQuery", {
         answer: DataKinds.STRING
     }
 });
+return JQuery;
 
 };
 
