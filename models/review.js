@@ -66,6 +66,7 @@ var JQuery = sequelize.define("JQuery", {
     }
 });
 return JQuery;
+//please help
 
 };
 
