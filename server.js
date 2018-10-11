@@ -129,12 +129,12 @@ var cards = [
 // Routes
 app.get("/sets", function (req, res) {
   data = cards;
-  res.render("categorIES", data);
+  res.render("sets", data);
 });
 
 app.get("/cards", function (req, res) {
   data = cards;
-  res.render("categorY", data);
+  res.render("cards", data);
 });
 
 app.get("/all-cards", function (req, res) {
