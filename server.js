@@ -125,17 +125,21 @@ var cards = [
   }
 ];
 
-
 // Routes
+app.get("/", function (req, res) {
+  data = cards;
+  res.render("login", data);
+},
+
 app.get("/sets", function (req, res) {
   data = cards;
   res.render("sets", data);
-});
+},
 
 app.get("/cards", function (req, res) {
   data = cards;
   res.render("cards", data);
-});
+},
 
 app.get("/all-cards", function (req, res) {
 
@@ -148,11 +152,13 @@ app.get("/all-cards", function (req, res) {
     // Get the current animal.
     var currentCard = cards[i];
     data.cards.push(currentCard);
-  }
+  };
 
   res.render("index2", data);
-});
-
+})
+)
+)
+)
 
 // db.sequelize.sync.then(function() {
 //   app.listen(PORT, function() {
