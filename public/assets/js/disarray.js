@@ -126,15 +126,15 @@ $("#module-git").on("click", function (event) {
     $("#module-git").addClass('roll-out-right');
 });
 
-$("#review").on("click", function (event) {
-    event.preventDefault();
-    $("#review").addClass('roll-out-right');
-});
+// $("#review").on("click", function (event) {
+//     event.preventDefault();
+//     $("#review").addClass('roll-out-right');
+// });
 
-$("#understand").on("click", function (event) {
-    event.preventDefault();
-    $("#understand").addClass('roll-out-right');
-});
+// $("#understand").on("click", function (event) {
+//     event.preventDefault();
+//     $("#understand").addClass('roll-out-right');
+// });
 
 $("#Landing").on("click", "Button",function () {
     // alert(this.id + "was just clicked!")
