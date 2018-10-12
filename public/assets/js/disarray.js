@@ -104,6 +104,9 @@ cardToggle();
 $("#module-html").on("click", function (event) {
     event.preventDefault();
     $("#module-html").addClass('roll-out-right');
+    setTimeout(function(){
+        (window.location.replace("/cards"));
+    }, 500);
 });
 $("#module-css").on("click", function (event) {
     event.preventDefault();
@@ -136,8 +139,8 @@ $("#module-git").on("click", function (event) {
 //     $("#understand").addClass('roll-out-right');
 // });
 
-$("#Landing").on("click", "Button",function () {
-    // alert(this.id + "was just clicked!")
+$("#Landing").on("click", "Button", function () {
+    alert(this.id + "was just clicked!")
 
     var module = this.id;
     var getthatmodule = ("./assets/data/" + module + ".json");
