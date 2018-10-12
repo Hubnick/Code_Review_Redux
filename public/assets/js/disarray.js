@@ -101,9 +101,43 @@ cardToggle();
 // adjust Q+A display by i++ to display the next Q
 // if there are no more Questions left in the array: display an alert and go back to the Landing Page
 
+$("#module-html").on("click", function (event) {
+    event.preventDefault();
+    $("#module-html").addClass('roll-out-right');
+});
+$("#module-css").on("click", function (event) {
+    event.preventDefault();
+    $("#module-css").addClass('roll-out-right');
+});
+$("#module-jquery").on("click", function (event) {
+    event.preventDefault();
+    $("#module-jquery").addClass('roll-out-right');
+});
+$("#module-javascript").on("click", function (event) {
+    event.preventDefault();
+    $("#module-javascript").addClass('roll-out-right');
+});
+$("#module-api").on("click", function (event) {
+    event.preventDefault();
+    $("#module-api").addClass('roll-out-right');
+});
+$("#module-git").on("click", function (event) {
+    event.preventDefault();
+    $("#module-git").addClass('roll-out-right');
+});
 
-$("#Landing :Button").on("click", function () {
-    alert(this.id + "was just clicked!")
+$("#review").on("click", function (event) {
+    event.preventDefault();
+    $("#review").addClass('roll-out-right');
+});
+
+$("#understand").on("click", function (event) {
+    event.preventDefault();
+    $("#understand").addClass('roll-out-right');
+});
+
+$("#Landing").on("click", "Button",function () {
+    // alert(this.id + "was just clicked!")
 
     var module = this.id;
     var getthatmodule = ("./assets/data/" + module + ".json");
@@ -113,7 +147,9 @@ $("#Landing :Button").on("click", function () {
         //display initial question
         $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
         //testing function for now
-    });
+    })
+
+
 
     // $.get("/cards", function (data) {
 
@@ -121,9 +157,6 @@ $("#Landing :Button").on("click", function () {
 
     // changeState();
 });
-
-
-
 
 //review and understand button/div functionality -- need to put in functions and clean up?
 $("#reviewContain").on("click", "#review, #understand", function (event) {
@@ -163,8 +196,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
                 understandArr = [];
 
 
-            }
-            else {
+            } else {
                 alert("good job, going back to categories");
                 reviewArr = [];
 
@@ -194,9 +226,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
 
             alert("congratulations, you understand all of it!")
             changeState();
-        }
-
-        else if ((moduleJson.length === 0) && (reviewArr.length !== 0)) {
+        } else if ((moduleJson.length === 0) && (reviewArr.length !== 0)) {
             count = 0;
             var repeat = confirm("Do you want to review the questions you had difficulty with again?");
             if (repeat) {
@@ -207,8 +237,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
                 //display initial question
                 $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
 
-            }
-            else {
+            } else {
                 alert("good job, going back to categories");
                 reviewArr = [];
                 //array for  i understand card data
@@ -251,33 +280,3 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
         $("div.answer").html("<b>Answer</b><br><br><br>" + moduleJson[count].answer);
     }
 });
-
-$(document).ready(function () {
-    $("#module-html").click(function (event) {
-      event.preventDefault();
-    });
-    $("#module-css").click(function (event) {
-      event.preventDefault();
-    });
-    $("#module-jquery").click(function (event) {
-      event.preventDefault();
-    });
-    $("#module-javascript").click(function (event) {
-      event.preventDefault();
-    });
-    $("#module-api").click(function (event) {
-      event.preventDefault();
-    });
-    $("#module-git").click(function (event) {
-      event.preventDefault();
-    });
-  
-    $("#review").click(function (event) {
-      event.preventDefault();
-    });
-  
-    $("#understand").click(function (event) {
-      event.preventDefault();
-    });
-  
-  });
