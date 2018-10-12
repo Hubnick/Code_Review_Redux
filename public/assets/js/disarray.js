@@ -246,3 +246,33 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
         $("div.answer").html("<b>Answer</b><br><br><br>" + moduleJson[count].answer);
     }
 });
+
+$(document).ready(function () {
+    $("#module-html").click(function (event) {
+      event.preventDefault();
+    });
+    $("#module-css").click(function (event) {
+      event.preventDefault();
+    });
+    $("#module-jquery").click(function (event) {
+      event.preventDefault();
+    });
+    $("#module-javascript").click(function (event) {
+      event.preventDefault();
+    });
+    $("#module-api").click(function (event) {
+      event.preventDefault();
+    });
+    $("#module-git").click(function (event) {
+      event.preventDefault();
+    });
+  
+    $("#review").click(function (event) {
+      event.preventDefault();
+    });
+  
+    $("#understand").click(function (event) {
+      event.preventDefault();
+    });
+  
+  });
