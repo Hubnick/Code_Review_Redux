@@ -106,27 +106,42 @@ $("#module-html").on("click", function (event) {
     $("#module-html").addClass('roll-out-right');
     setTimeout(function(){
         (window.location.replace("/cards"));
-    }, 500);
+    }, 700);
 });
 $("#module-css").on("click", function (event) {
     event.preventDefault();
     $("#module-css").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/cards"));
+    }, 700);
 });
 $("#module-jquery").on("click", function (event) {
     event.preventDefault();
     $("#module-jquery").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/cards"));
+    }, 700);
 });
 $("#module-javascript").on("click", function (event) {
     event.preventDefault();
     $("#module-javascript").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/cards"));
+    }, 700);
 });
 $("#module-api").on("click", function (event) {
     event.preventDefault();
     $("#module-api").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/cards"));
+    }, 700);
 });
 $("#module-git").on("click", function (event) {
     event.preventDefault();
     $("#module-git").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/cards"));
+    }, 700);
 });
 
 // $("#review").on("click", function (event) {
