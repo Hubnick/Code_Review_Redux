@@ -1,74 +1,81 @@
-button:visited{
+button:visited {
     background-color: #e3dccc;
- }
- button:hover{
-     background-color: #e3dccc;
- }
- button:active{
-     background-color: #e3dccc;
- }
- button:focus{
-     background-color: #e3dccc;
- }
- .card {
-     border-top-color: #e3dccc;
-     border-bottom-color: #b0a06f;
-     border-right-color: #b0a06f;
-     border-left-color: #e3dccc;
-     border-width: 5px;
-     color: #14395a;
- }
- .card-panel {
-     background-color: #14395a;
-     color: #b0a06f;
- }
- 
- body {
-     font-family: 'Work Sans';
- }
- 
- button {
-     font-family: 'Work Sans';
-     font-weight: bolder;
- }
- 
- /***sets the initial display state of Q+A container to none */
- /* #notLanding {
+}
+
+button:hover {
+    background-color: #e3dccc;
+}
+
+button:active {
+    background-color: #e3dccc;
+}
+
+button:focus {
+    background-color: #e3dccc;
+}
+
+.card {
+    border-top-color: #e3dccc;
+    border-bottom-color: #b0a06f;
+    border-right-color: #b0a06f;
+    border-left-color: #e3dccc;
+    border-width: 5px;
+    color: #14395a;
+}
+
+.card-panel {
+    background-color: #14395a;
+    color: #b0a06f;
+}
+
+body {
+    font-family: 'Work Sans';
+}
+
+button {
+    font-family: 'Work Sans';
+    font-weight: bolder;
+}
+
+/***sets the initial display state of Q+A container to none */
+/* #notLanding {
      display: none;
  } */
- 
- #html-understood,
- #css-understood,
- #javascript-understood,
- #jquery-understood,
- #api-understood,
- #git-understood {
-     display: none;
- }
- 
- #flashCards, .question, .answer {
-     height: 100%;
-     text-align: center;
-     padding: 10px;
-     font-size: xx-large;
-     
- }
- 
- #cardContain {
-     overflow: auto;
-     cursor: pointer;
- }
- 
- button {
-     cursor: pointer;
- }
 
- .btn.waves-effect.waves-light{
-    height:60px; 
-    width:150px; 
-    margin: -20px -50px; 
-    top:50%; 
-    left:50%;
+#html-understood,
+#css-understood,
+#javascript-understood,
+#jquery-understood,
+#api-understood,
+#git-understood {
+    display: none;
+}
+
+#flashCards,
+.question,
+.answer {
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: xx-large;
+
+}
+
+#cardContain {
+    overflow: auto;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn.waves-effect.waves-light {
+    height: 60px;
+    width: 150px;
+    margin: -20px -50px;
+    top: 50%;
+    left: 50%;
     background-color: #14395a;
     color: #b0a06f;
     font-size: 15px;
@@ -97,3 +104,13 @@ button:visited{
 .slide-out-bck-br{-webkit-animation:slide-out-bck-br .5s cubic-bezier(.55,.085,.68,.53) both;animation:slide-out-bck-br .5s cubic-bezier(.55,.085,.68,.53) both}
 
 @-webkit-keyframes slide-out-bck-br{0%{-webkit-transform:translateZ(0) translateY(0) translateX(0);transform:translateZ(0) translateY(0) translateX(0);opacity:1}100%{-webkit-transform:translateZ(-1100px) translateY(1000px) translateX(1000px);transform:translateZ(-1100px) translateY(1000px) translateX(1000px);opacity:0}}@keyframes slide-out-bck-br{0%{-webkit-transform:translateZ(0) translateY(0) translateX(0);transform:translateZ(0) translateY(0) translateX(0);opacity:1}100%{-webkit-transform:translateZ(-1100px) translateY(1000px) translateX(1000px);transform:translateZ(-1100px) translateY(1000px) translateX(1000px);opacity:0}}
+    /* margin-left: 12px;
+    background-color: #14395a !important;
+}
+
+.card.blue-grey.darken-1 {
+    border: solid 5px #b0a06f;
+    transition: border-width 0.6s linear;
+}
+  
+.card.blue-grey.darken-1:hover { border-width: 10px; } */

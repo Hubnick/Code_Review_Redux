@@ -30,19 +30,19 @@ var tinyUnderstandCards = [];
 
 //function to toggle between question/answer on click
 function cardToggle() {
-  //question div is hidden bc right now placeholder start text is in html .answer div, on click goes  shows .question div first
-  $('div.answer').hide();
-  //on click to toggle q & a divs
-  $('#flashCards').on('click',
-    function() {
+    //question div is hidden bc right now placeholder start text is in html .answer div, on click goes  shows .question div first
+    $('div.answer').hide();
+    //on click to toggle q & a divs
+    $('#flashCards').on('click',
+        function () {
 
-      $('.answer, .question').slideToggle(200);
+            $('.answer, .question').slideToggle(200);
 
 
-      $("div.question").html("<b>Question</b><br><br><br>" + moduleJson[count].question);
-      $("div.answer").html("<b>Answer</b><br><br><br>" + moduleJson[count].answer);
-    }
-  );
+            $("div.question").html("<b>Question</b><br><br><br>" + moduleJson[count].question);
+            $("div.answer").html("<b>Answer</b><br><br><br>" + moduleJson[count].answer);
+        }
+    );
 
 
 }
@@ -103,7 +103,7 @@ cardToggle();
 
 
 $("#Landing :Button").on("click", function () {
-    // alert(this.id + "was just clicked!")
+    alert(this.id + "was just clicked!")
 
     var module = this.id;
     var getthatmodule = ("./assets/data/" + module + ".json");
@@ -114,7 +114,12 @@ $("#Landing :Button").on("click", function () {
         $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
         //testing function for now
     });
-    changeState();
+
+    // $.get("/cards", function (data) {
+
+    // });
+
+    // changeState();
 });
 
 
