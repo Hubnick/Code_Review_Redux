@@ -141,6 +141,23 @@ app.get("/cards", function (req, res) {
   res.render("cards", data);
 },
 
+app.get("/module-html", function (req, res) {
+
+  // 2. Loop through the animals, and send those that are pets to the index handlebars file.
+  var data = {
+    cards: []
+  };
+
+  for (var i = 0; i < cards.length; i += 1) {
+    // Get the current animal.
+    var currentCard = cards[i];
+    data.cards.push(currentCard);
+  };
+
+  res.render("module-html", data);
+}),
+
+
 app.get("/all-cards", function (req, res) {
 
   // 2. Loop through the animals, and send those that are pets to the index handlebars file.
