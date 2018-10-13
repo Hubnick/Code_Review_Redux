@@ -101,7 +101,10 @@ cardToggle();
 // adjust Q+A display by i++ to display the next Q
 // if there are no more Questions left in the array: display an alert and go back to the Landing Page
 
-
+$(document).ready(function(){
+    $('.modal').modal();
+  });
+    
 
 $("#module-html").on("click", function (event) {
     event.preventDefault();
@@ -131,7 +134,7 @@ $("#module-git").on("click", function (event) {
     $("#module-git").addClass('roll-out-right');
 });
 
-
+// $("#results-modal").modal("toggle");
 
 
 // $("#review").on("click", function (event) {
@@ -288,5 +291,5 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
         $("div.answer").html("<b>Answer</b><br><br><br>" + moduleJson[count].answer);
     }
 });
-        
 
+     

@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<!-- that nice Work Sans Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 	{{!--
 	<script src="https://code.jquery.com/jquery.js"></script> --}}
@@ -21,14 +23,81 @@
 
 <body>
 
+
 	<nav>
 		<div class="nav-wrapper">
 			<a href="#" class="brand-logo">Logo</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a href="">Login</a></li>
-				<li><a href="">Sign Up</a></li>
+			<ul class="right hide-on-med-and-down">
+				<li><button data-target="login" class="btn modal-trigger">Login</button></li>
+				<li><button data-target="signUp" class="btn modal-trigger">Sign Up</button></li>
+			</ul>
 		</div>
 	</nav>
+
+
+	<!-- Modal Structure -->
+	<div id="login" class="modal">
+		<div class="login container-modal">
+			<h4>Login</h4>
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s6">
+							<i class="material-icons prefix">person_pin</i>
+							<input id="icon_prefix" type="text" class="validate">
+							<label for="icon_prefix">Username/E-mail</label>
+						</div>
+						<div class="input-field col s6">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="icon_telephone" type="tel" class="validate">
+							<label for="icon_telephone">Password</label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Login</a>
+		</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="signUp" class="modal">
+		<div class="signUp container-modal">
+			<h4>Sign Up</h4>
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s6">
+							<input id="first_name" type="text" class="validate">
+							<label for="first_name">First Name</label>
+						</div>
+						<div class="input-field col s6">
+							<input id="last_name" type="text" class="validate">
+							<label for="last_name">Last Name</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="email" type="email" class="validate">
+							<label for="email">Email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="password" type="password" class="validate">
+							<label for="password">Password</label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">SignUp</a>
+		</div>
+	</div>
+
+
 
 
 	<div id="Landing" class="container-nav">
@@ -92,11 +161,10 @@
 
 	{{{ body }}}
 
-
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	<!-- jQuery link -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	<!-- js flip -->
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 	<!-- Javascript link goes below this line -->
