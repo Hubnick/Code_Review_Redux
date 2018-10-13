@@ -128,7 +128,7 @@ var cards = [
 // Routes
 app.get("/", function (req, res) {
   data = cards;
-  res.render("login", data);
+  res.render("userpage", data);
 },
 
 app.get("/sets", function (req, res) {
