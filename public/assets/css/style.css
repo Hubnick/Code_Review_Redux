@@ -255,3 +255,19 @@ font-size: 4.2rem;
 h4{
     color: #b0a06f;
 }
+
+.container-avatar{
+    position: absolute;
+    right: 200px;
+    width: 500px;
+    border: 3px solid #14395a;
+    padding: 20px;
+    margin: 150px;
+    font-size: 18px;
+    font-family: 'Work Sans' !important;
+
+}
+
+.secondary-content{
+  color: #14395a;
+}
