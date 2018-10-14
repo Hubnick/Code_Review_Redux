@@ -6,7 +6,7 @@ var db = require("../models");
 passport.use(new LocalStrategy(
   {
     usernameField: "email",
-    userpasswordField: "password"
+    // userpasswordField: "password"
   },
   function(email, password, done) {
     console.log("in local pass port")
