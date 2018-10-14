@@ -27,13 +27,21 @@ can emre see us?
 
 	<nav>
 		<div class="nav-wrapper">
-			<a href="/" class="brand-logo">Logo</a>
+
+			 <a href="/" class="brand-logo"><img id="logo" src="/assets/Images/LogoMakr_7MUU7l.png"></a>
+			<a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
 			<ul class="right hide-on-med-and-down">
-				<li><button data-target="login" class="btn modal-trigger">Login</button></li>
-				<li><button data-target="signUp" class="btn modal-trigger">Sign Up</button></li>
+				<li><a><button data-target="login" class="btn modal-trigger">Login</a></button></li>
+				<li><a><button data-target="signUp" class="btn modal-trigger">Sign Up</a></button></li>
 			</ul>
 		</div>
 	</nav>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li><a><button data-target="login" class="btn modal-trigger">Login</a></button></li>
+		<li><a><button data-target="signUp" class="btn modal-trigger">Sign Up</a></button></li>
+	</ul>
 
 
 	<!-- Modal Structure -->
@@ -160,7 +168,14 @@ can emre see us?
 		</div>
 	</div>
 
+
+
 	{{{ body }}}
+
+	<nav class="navbar navbar-light bg-light">
+		<span class="navbar-brand mb-0 h1"></span>
+	</nav>
+
 
 	<!-- jQuery link -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -177,6 +192,8 @@ can emre see us?
 	<script src="./assets/js/animate.js"></script>
 
 
+
 </body>
+
 
 </html>
