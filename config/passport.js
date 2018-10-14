@@ -5,9 +5,13 @@ var db = require("../models");
 
 passport.use(new LocalStrategy(
   {
-    usernameField: "email"
+    usernameField: "email",
+    userpasswordField: "password"
   },
   function(email, password, done) {
+    console.log("in local pass port")
+    console.log(email, " this is email");
+    console.log(password, "this si the password")
     db.User.findOne({
       where: {
         email: email

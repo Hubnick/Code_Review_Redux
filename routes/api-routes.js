@@ -1,12 +1,24 @@
 var db = require("../models");
+var express = require('express');
+var router = express.Router();
 var passport = require("../config/passport");
+//passport.authenticate("local"), 
 
-module.exports = function(app) {
-  app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.json("/members");
+  router.post("/login", function(req, res, next) {
+    passport.authenticate("local", (err, user, info)=>{
+      if (err) { return next(err); }
+      if (!user) { return res.json({auth: false}); }
+      req.logIn(user, function(err) {
+          if (err) { return next(err); }
+          
+          return res.json({isUser : true, user: user});
+        });
+    })(req, res,next);
+
+ 
   });
 
-  app.post("/api/signup", function(req, res) {
+  router.post("/signup", function(req, res) {
     console.log(req.body);
     db.User.create({
       email: req.body.email,
@@ -21,12 +33,12 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/logout", function(req, res) {
+  router.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
   });
 
-  app.get("/api/user_data", function(req, res) {
+  router.get("/user_data", function(req, res) {
     if (!req.user) {
       res.json({});
     }
@@ -38,4 +50,4 @@ module.exports = function(app) {
     }
   });
 
-};
+module.exports = router

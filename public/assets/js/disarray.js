@@ -8,7 +8,7 @@
     var url = window.location.pathname;
     console.log(url);
     var module = url;
-    var getthatmodule = ("./assets/data/" + module + ".json");
+    var getthatmodule = ("./assets/data" + module + ".json");
     console.log(getthatmodule);
 
     $.getJSON(getthatmodule, function (json) {
@@ -65,6 +65,21 @@ function cardToggle() {
 
 
 }
+$(document).on('click', '#loginSubmit', function(e){
+    e.preventDefault();
+   
+    var email = $('#loginEmail').val();
+    var password = $('#loginPassword').val();
+    var logInInfo ={
+        email : email,
+        password: password
+    }
+    $.post('/api/login', logInInfo, function(response){
+        console.log(response);
+    } );
+
+    
+});
 
 // ----------------------------------------------------------------------------------------------------
 // (iii) other functions

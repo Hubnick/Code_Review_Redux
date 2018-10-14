@@ -23,12 +23,11 @@
 
 <body>
 
+
 	<nav>
 		<div class="nav-wrapper">
-
-			 <a href="/" class="brand-logo"><img id="logo" src="/assets/Images/LogoMakr_7MUU7l.png"></a>
-			<a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-
+			 <a href="#" class="brand-logo"><img id="logo" src="/assets/Images/LogoMakr_7MUU7l.png"></a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			<ul class="right hide-on-med-and-down">
 				<li><a><button data-target="login" class="btn modal-trigger">Login</a></button></li>
 				<li><a><button data-target="signUp" class="btn modal-trigger">Sign Up</a></button></li>
@@ -51,20 +50,20 @@
 					<div class="row">
 						<div class="input-field col s6">
 							<i class="material-icons prefix">person_pin</i>
-							<input id="icon_prefix" type="text" class="validate">
-							<label for="icon_prefix">Username/E-mail</label>
+							<input id="loginEmail" type="text" class="validate">
+							<label for="loginEmail">Username/E-mail</label>
 						</div>
 						<div class="input-field col s6">
 							<i class="material-icons prefix">vpn_key</i>
-							<input id="icon_telephone" type="tel" class="validate">
-							<label for="icon_telephone">Password</label>
+							<input id="loginPassword" type="tel" class="validate">
+							<label for="loginPassword">Password</label>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
 		<div class="modal-footer">
-			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Login</a>
+			<a  id="loginSubmit" class="modal-close waves-effect waves-green btn-flat">Login</a>
 		</div>
 	</div>
 

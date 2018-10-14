@@ -12,10 +12,12 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
      },
 
-     lastname: {
-     type: DataTypes.STRING,
-     allowNull: false
-     },
+    //  lastname: {
+    //  type: DataTypes.STRING,
+    //  allowNull: false
+    //  },
+
+    // email: {
       
       email: {
       type: DataTypes.STRING,
