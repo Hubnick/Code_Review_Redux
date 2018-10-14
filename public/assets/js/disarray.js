@@ -70,30 +70,35 @@ function cardToggle() {
 // (iii) other functions
 // ----------------------------------------------------------------------------------------------------
 
+
+//============ old function ========================================================
 //***this function switches the overall view between the two main containers
-function changeState() {
-    var x = document.getElementById('Landing');
-    var y = document.getElementById('notLanding');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-        y.style.display = 'none';
-    } else {
-        x.style.display = 'none';
-        y.style.display = 'block';
-    }
-    $("#cardsLeft").text("Click the card above to see the answer.  If the question was difficult, click the Review Again button below.  If you understood it easily, click the I Understand This button.");
+// function changeState() {
+//     var x = document.getElementById('Landing');
+//     var y = document.getElementById('notLanding');
+//     if (x.style.display === 'none') {
+//         x.style.display = 'block';
+//         y.style.display = 'none';
+//     } else {
+//         x.style.display = 'none';
+//         y.style.display = 'block';
+//     }
+//     $("#cardsLeft").text("Click the card above to see the answer.  If the question was difficult, click the Review Again button below.  If you understood it easily, click the I Understand This button.");
+// }
+//============ old function ========================================================
 
-}
 
+//============ old function ========================================================
 // generate cards for review
 // function genReviewCards() {
 //   $(".tinyReview").html(reviewArr.id.map(function (genTinyReview) {
 //     return ("<div class='tinyGen' data-topic='" + genTinyReview +"'>" + genTinyReview + '</div>');
 //   }).join(" "));
 // }
+//============ old function ========================================================
+
 
 //on click toggle between question and answer state
-
 cardToggle();
 
 
@@ -253,7 +258,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
 
                 //array for  i understand card data
                 understandArr = [];
-                changeState();
+                // changeState();
             }
         }
 
@@ -276,7 +281,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
         if ((moduleJson.length === 0) && (reviewArr.length === 0)) {
 
             alert("congratulations, you understand all of it!")
-            changeState();
+            // changeState();
         } else if ((moduleJson.length === 0) && (reviewArr.length !== 0)) {
             count = 0;
             var repeat = confirm("Do you want to review the questions you had difficulty with again?");
@@ -296,7 +301,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
 
                 //array for  i understand card data
                 understandArr = [];
-                changeState();
+                // changeState();
             }
 
         }
