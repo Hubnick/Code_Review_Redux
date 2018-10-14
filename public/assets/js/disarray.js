@@ -104,7 +104,10 @@ cardToggle();
 $(document).ready(function(){
     $('.modal').modal();
   });
-    
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 
 $("#module-html").on("click", function (event) {
     event.preventDefault();

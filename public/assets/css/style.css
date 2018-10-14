@@ -257,17 +257,40 @@ h4{
 }
 
 .container-avatar{
-    position: absolute;
+    /* position: absolute;
     right: 200px;
     width: 500px;
     border: 3px solid #14395a;
     padding: 20px;
     margin: 150px;
     font-size: 18px;
+    font-family: 'Work Sans' !important; */
+    position: absolute;
+    right: 300px;
+    width: 500px;
+    border: 3px solid #14395a;
+    padding: 20px;
+    margin: 80px;
+    margin-right: -50px;
+    font-size: 18px;
     font-family: 'Work Sans' !important;
-
 }
 
 .secondary-content{
   color: #14395a;
+}
+
+.navbar.navbar-light.bg-light{
+    background-color: #14395a !important;
+    margin: 500px;
+    margin-left: 0px;
+    height: 80px;
+}
+
+#logo {
+    height: 65px;
+}
+
+.brand-logo {
+    padding-left: -10px !important;
 }
