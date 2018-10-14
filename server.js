@@ -5,9 +5,9 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 
 var app = express();
-var bodyParser=require("body-parser");
-var session=require("express-session");
-var passport=require("./config/passport");
+var bodyParser = require("body-parser");
+var session = require("express-session");
+var passport = require("./config/passport");
 
 
 var PORT = process.env.PORT || 8080;
@@ -18,10 +18,10 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json);
 app.use(express.static("public"));
-app.use(session({secret:"codereview", resave: true, saveUninitialzed:true}));
+app.use(session({ secret: "codereview", resave: true, saveUninitialzed: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -131,34 +131,71 @@ app.get("/", function (req, res) {
   res.render("userpage", data);
 },
 
-app.get("/sets", function (req, res) {
-  data = cards;
-  res.render("sets", data);
-},
+  app.get("/sets", function (req, res) {
+    data = cards;
+    res.render("sets", data);
+  },
 
-app.get("/cards", function (req, res) {
-  data = cards;
-  res.render("cards", data);
-},
+    app.get("/cards", function (req, res) {
+      data = cards;
+      res.render("cards", data);
+    },
 
-app.get("/all-cards", function (req, res) {
+      app.get("/module-html", function (req, res) {
+        data = cards;
+        res.render("module-html", data);
+      },
 
-  // 2. Loop through the animals, and send those that are pets to the index handlebars file.
-  var data = {
-    cards: []
-  };
+        app.get("/module-css", function (req, res) {
+          data = cards;
+          res.render("module-css", data);
+        },
 
-  for (var i = 0; i < cards.length; i += 1) {
-    // Get the current animal.
-    var currentCard = cards[i];
-    data.cards.push(currentCard);
-  };
+          app.get("/module-javascript", function (req, res) {
+            data = cards;
+            res.render("module-javascript", data);
+          },
 
-  res.render("index2", data);
-})
-)
-)
-)
+            app.get("/module-jquery", function (req, res) {
+              data = cards;
+              res.render("module-jquery", data);
+            },
+
+              app.get("/module-api", function (req, res) {
+                data = cards;
+                res.render("module-api", data);
+              },
+
+                app.get("/module-git", function (req, res) {
+                  data = cards;
+                  res.render("module-git", data);
+                },
+
+
+
+
+                  app.get("/all-cards", function (req, res) {
+                    // 2. Loop through the animals, and send those that are pets to the index handlebars file.
+                    var data = {
+                      cards: []
+                    };
+                    for (var i = 0; i < cards.length; i += 1) {
+                      // Get the current animal.
+                      var currentCard = cards[i];
+                      data.cards.push(currentCard);
+                    };
+
+                    res.render("index2", data);
+                  })
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+);
 
 // db.sequelize.sync.then(function() {
 //   app.listen(PORT, function() {

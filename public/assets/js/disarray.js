@@ -3,6 +3,25 @@
 // ----------------------------------------------------------------------------------------------------
 // ---------(Landing page)
 
+ function initiate () {
+
+    var url = window.location.pathname;
+    console.log(url);
+    var module = url;
+    var getthatmodule = ("./assets/data/" + module + ".json");
+    console.log(getthatmodule);
+
+    $.getJSON(getthatmodule, function (json) {
+        moduleJson = json.cards;
+        //display initial question
+        $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
+        //testing function for now
+    })
+};
+
+initiate();
+
+
 //Grab the json file data into array
 var moduleJson = [];
 
@@ -51,30 +70,35 @@ function cardToggle() {
 // (iii) other functions
 // ----------------------------------------------------------------------------------------------------
 
+
+//============ old function ========================================================
 //***this function switches the overall view between the two main containers
-function changeState() {
-    var x = document.getElementById('Landing');
-    var y = document.getElementById('notLanding');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-        y.style.display = 'none';
-    } else {
-        x.style.display = 'none';
-        y.style.display = 'block';
-    }
-    $("#cardsLeft").text("Click the card above to see the answer.  If the question was difficult, click the Review Again button below.  If you understood it easily, click the I Understand This button.");
+// function changeState() {
+//     var x = document.getElementById('Landing');
+//     var y = document.getElementById('notLanding');
+//     if (x.style.display === 'none') {
+//         x.style.display = 'block';
+//         y.style.display = 'none';
+//     } else {
+//         x.style.display = 'none';
+//         y.style.display = 'block';
+//     }
+//     $("#cardsLeft").text("Click the card above to see the answer.  If the question was difficult, click the Review Again button below.  If you understood it easily, click the I Understand This button.");
+// }
+//============ old function ========================================================
 
-}
 
+//============ old function ========================================================
 // generate cards for review
 // function genReviewCards() {
 //   $(".tinyReview").html(reviewArr.id.map(function (genTinyReview) {
 //     return ("<div class='tinyGen' data-topic='" + genTinyReview +"'>" + genTinyReview + '</div>');
 //   }).join(" "));
 // }
+//============ old function ========================================================
+
 
 //on click toggle between question and answer state
-
 cardToggle();
 
 
@@ -113,28 +137,43 @@ $("#module-html").on("click", function (event) {
     event.preventDefault();
     $("#module-html").addClass('roll-out-right');
     setTimeout(function(){
-        (window.location.replace("/cards"));
-    }, 500);
+        (window.location.replace("/module-html"));
+    }, 700);
 });
 $("#module-css").on("click", function (event) {
     event.preventDefault();
     $("#module-css").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/module-css"));
+    }, 700);
 });
 $("#module-jquery").on("click", function (event) {
     event.preventDefault();
     $("#module-jquery").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/module-jquery"));
+    }, 700);
 });
 $("#module-javascript").on("click", function (event) {
     event.preventDefault();
     $("#module-javascript").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/module-javascript"));
+    }, 700);
 });
 $("#module-api").on("click", function (event) {
     event.preventDefault();
     $("#module-api").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/module-api"));
+    }, 700);
 });
 $("#module-git").on("click", function (event) {
     event.preventDefault();
     $("#module-git").addClass('roll-out-right');
+    setTimeout(function() {
+        (window.location.replace("/module-git"));
+    }, 700);
 });
 
 // $("#results-modal").modal("toggle");
@@ -150,27 +189,33 @@ $("#module-git").on("click", function (event) {
 //     $("#understand").addClass('roll-out-right');
 // });
 
-$("#Landing").on("click", "Button", function () {
-    alert(this.id + "was just clicked!")
-
-    var module = this.id;
-    var getthatmodule = ("./assets/data/" + module + ".json");
-
-    $.getJSON(getthatmodule, function (json) {
-        moduleJson = json.cards;
-        //display initial question
-        $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
-        //testing function for now
-    })
 
 
 
+
+//============ old function ========================================================
+// $("#Landing").on("click", "Button", function () {
+//     alert(this.id + "was just clicked!")
+
+//     var module = this.id;
+//     var getthatmodule = ("./assets/data/" + module + ".json");
+
+//     $.getJSON(getthatmodule, function (json) {
+//         moduleJson = json.cards;
+//         //display initial question
+//         $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
+//         //testing function for now
+//     })
     // $.get("/cards", function (data) {
-
     // });
-
     // changeState();
-});
+// });
+//============ old function =========================================================
+
+
+
+
+
 
 //review and understand button/div functionality -- need to put in functions and clean up?
 $("#reviewContain").on("click", "#review, #understand", function (event) {
@@ -216,7 +261,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
 
                 //array for  i understand card data
                 understandArr = [];
-                changeState();
+                // changeState();
             }
         }
 
@@ -239,7 +284,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
         if ((moduleJson.length === 0) && (reviewArr.length === 0)) {
 
             alert("congratulations, you understand all of it!")
-            changeState();
+            // changeState();
         } else if ((moduleJson.length === 0) && (reviewArr.length !== 0)) {
             count = 0;
             var repeat = confirm("Do you want to review the questions you had difficulty with again?");
@@ -259,7 +304,7 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
 
                 //array for  i understand card data
                 understandArr = [];
-                changeState();
+                // changeState();
             }
 
         }
