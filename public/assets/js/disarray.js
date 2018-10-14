@@ -3,6 +3,25 @@
 // ----------------------------------------------------------------------------------------------------
 // ---------(Landing page)
 
+ function initiate () {
+
+    var url = window.location.pathname;
+    console.log(url);
+    var module = url;
+    var getthatmodule = ("./assets/data/" + module + ".json");
+    console.log(getthatmodule);
+
+    $.getJSON(getthatmodule, function (json) {
+        moduleJson = json.cards;
+        //display initial question
+        $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
+        //testing function for now
+    })
+};
+
+initiate();
+
+
 //Grab the json file data into array
 var moduleJson = [];
 
@@ -110,42 +129,42 @@ $("#module-html").on("click", function (event) {
     event.preventDefault();
     $("#module-html").addClass('roll-out-right');
     setTimeout(function(){
-        (window.location.replace("/cards"));
+        (window.location.replace("/module-html"));
     }, 700);
 });
 $("#module-css").on("click", function (event) {
     event.preventDefault();
     $("#module-css").addClass('roll-out-right');
     setTimeout(function() {
-        (window.location.replace("/cards"));
+        (window.location.replace("/module-css"));
     }, 700);
 });
 $("#module-jquery").on("click", function (event) {
     event.preventDefault();
     $("#module-jquery").addClass('roll-out-right');
     setTimeout(function() {
-        (window.location.replace("/cards"));
+        (window.location.replace("/module-jquery"));
     }, 700);
 });
 $("#module-javascript").on("click", function (event) {
     event.preventDefault();
     $("#module-javascript").addClass('roll-out-right');
     setTimeout(function() {
-        (window.location.replace("/cards"));
+        (window.location.replace("/module-javascript"));
     }, 700);
 });
 $("#module-api").on("click", function (event) {
     event.preventDefault();
     $("#module-api").addClass('roll-out-right');
     setTimeout(function() {
-        (window.location.replace("/cards"));
+        (window.location.replace("/module-api"));
     }, 700);
 });
 $("#module-git").on("click", function (event) {
     event.preventDefault();
     $("#module-git").addClass('roll-out-right');
     setTimeout(function() {
-        (window.location.replace("/cards"));
+        (window.location.replace("/module-git"));
     }, 700);
 });
 
@@ -162,27 +181,33 @@ $("#module-git").on("click", function (event) {
 //     $("#understand").addClass('roll-out-right');
 // });
 
-$("#Landing").on("click", "Button", function () {
-    alert(this.id + "was just clicked!")
-
-    var module = this.id;
-    var getthatmodule = ("./assets/data/" + module + ".json");
-
-    $.getJSON(getthatmodule, function (json) {
-        moduleJson = json.cards;
-        //display initial question
-        $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
-        //testing function for now
-    })
 
 
-    
+
+
+//============ old function ========================================================
+// $("#Landing").on("click", "Button", function () {
+//     alert(this.id + "was just clicked!")
+
+//     var module = this.id;
+//     var getthatmodule = ("./assets/data/" + module + ".json");
+
+//     $.getJSON(getthatmodule, function (json) {
+//         moduleJson = json.cards;
+//         //display initial question
+//         $('div.question').html("<b>Question</b><br><br><br>" + moduleJson[count].question);
+//         //testing function for now
+//     })
     // $.get("/cards", function (data) {
-
     // });
-
     // changeState();
-});
+// });
+//============ old function =========================================================
+
+
+
+
+
 
 //review and understand button/div functionality -- need to put in functions and clean up?
 $("#reviewContain").on("click", "#review, #understand", function (event) {
