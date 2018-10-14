@@ -8,7 +8,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var passport = require("./config/passport");
-
+var apiRoutes = require("./routes/api-routes");
 
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
@@ -124,6 +124,8 @@ var cards = [
     answer: "Application Programming Interface. Tools computers use to communicate with each other"
   }
 ];
+
+app.use("/api", apiRoutes);
 
 // Routes
 app.get("/", function (req, res) {

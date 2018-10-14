@@ -63,9 +63,14 @@ button {
 }
 
 #cardContain {
+    /* overflow: auto;
+    cursor: pointer;
+    height: 400px; */
     overflow: auto;
     cursor: pointer;
-    height: 400px;
+    height: 280px;
+    width: 700px;
+    margin-left: 230px;
 }
 
 button {
@@ -225,7 +230,8 @@ h1{
 }
 
 h1.center-align.QA{
-font-size: 4.2rem;
+font-size: 3rem;
+margin-top: 10px;
 }
 
 .btn, .btn-large, .btn-small{
@@ -282,7 +288,8 @@ h4{
 
 .navbar.navbar-light.bg-light{
     background-color: #14395a !important;
-    margin: 500px;
+    /* margin: 500px; */
+    margin: 650px;
     margin-left: 0px;
     height: 80px;
 }
@@ -293,4 +300,12 @@ h4{
 
 .brand-logo {
     padding-left: -10px !important;
+}
+
+.row .col.s12.card-panel.flashcards{
+    width: 70%;
+    height: 80px;
+    margin-left: 230px;
+    left: auto;
+    right: auto;
 }
