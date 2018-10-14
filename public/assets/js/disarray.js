@@ -25,7 +25,6 @@ initiate();
 //Grab the json file data into array
 var moduleJson = [];
 
-
 // ---------(notLanding page)
 
 //array for review again card data
@@ -38,9 +37,9 @@ var understandArr = [];
 var count = 0;
 
 
-var tinyReviewCards = [];
+// var tinyReviewCards = [];
 
-var tinyUnderstandCards = [];
+// var tinyUnderstandCards = [];
 
 
 // ----------------------------------------------------------------------------------------------------
@@ -65,21 +64,21 @@ function cardToggle() {
 
 
 }
-$(document).on('click', '#loginSubmit', function(e){
-    e.preventDefault();
+// $(document).on('click', '#loginSubmit', function(e){
+//     e.preventDefault();
    
-    var email = $('#loginEmail').val();
-    var password = $('#loginPassword').val();
-    var logInInfo ={
-        email : email,
-        password: password
-    }
-    $.post('/api/login', logInInfo, function(response){
-        console.log(response);
-    } );
+//     var email = $('#loginEmail').val();
+//     var password = $('#loginPassword').val();
+//     var logInInfo ={
+//         email : email,
+//         password: password
+//     }
+//     $.post('/api/login', logInInfo, function(response){
+//         console.log(response);
+//     } );
 
-    
-});
+
+// });
 
 // ----------------------------------------------------------------------------------------------------
 // (iii) other functions
@@ -140,13 +139,13 @@ cardToggle();
 // adjust Q+A display by i++ to display the next Q
 // if there are no more Questions left in the array: display an alert and go back to the Landing Page
 
-$(document).ready(function(){
-    $('.modal').modal();
-  });
+// $(document).ready(function(){
+//     $('.modal').modal();
+//   });
 
-$(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
+// $(document).ready(function(){
+//     $('.sidenav').sidenav();
+//   });
 
 $("#module-html").on("click", function (event) {
     event.preventDefault();
@@ -340,13 +339,13 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
         $("div.question").html("<b>Question</b><br><br><br>" + moduleJson[count].question);
         $("div.answer").html("<b>Answer</b><br><br><br>" + moduleJson[count].answer);
 
-        $("#tinyUnderstand").html(tinyUnderstandCards.map(function (genTinyUnderstand) {
-            return ("<button class='tinyUnderstandGen' data-topic='" + genTinyUnderstand + "'>" + genTinyUnderstand + '</button>');
-        }).join(" "));
+        // $("#tinyUnderstand").html(tinyUnderstandCards.map(function (genTinyUnderstand) {
+        //     return ("<button class='tinyUnderstandGen' data-topic='" + genTinyUnderstand + "'>" + genTinyUnderstand + '</button>');
+        // }).join(" "));
 
-        $("#tinyReview").html(tinyReviewCards.map(function (genTinyReview) {
-            return ("<button class='tinyReviewGen' data-topic='" + genTinyReview + "'>" + genTinyReview + '</button>');
-        }).join(" "));
+        // $("#tinyReview").html(tinyReviewCards.map(function (genTinyReview) {
+        //     return ("<button class='tinyReviewGen' data-topic='" + genTinyReview + "'>" + genTinyReview + '</button>');
+        // }).join(" "));
 
     } else if (moduleJson.length <= count) {
         count = 0;

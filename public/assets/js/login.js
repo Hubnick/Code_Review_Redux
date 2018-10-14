@@ -1,3 +1,6 @@
+console.log("woo, login.js has loaded!")
+
+
 $(document).ready(function(){
     var loginForm = $("form.login");
     var emailInput = $("input#emailInput") 
