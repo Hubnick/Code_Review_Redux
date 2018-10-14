@@ -1,9 +1,14 @@
+console.log("woo, signup.js has loaded!")
+
+
+
 $(document).ready(function() {
     var signUpForm = $("form.signup");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
   
     signUpForm.on("submit", function(event) {
+      alert("submitted!")
       event.preventDefault();
       var userData = {
         email: emailInput.val().trim(),

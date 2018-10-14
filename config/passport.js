@@ -9,9 +9,9 @@ passport.use(new LocalStrategy(
     // userpasswordField: "password"
   },
   function(email, password, done) {
-    console.log("in local pass port")
-    console.log(email, " this is email");
-    console.log(password, "this si the password")
+    // console.log("in local pass port")
+    // console.log(email, " this is email");
+    // console.log(password, "this si the password")
     db.User.findOne({
       where: {
         email: email

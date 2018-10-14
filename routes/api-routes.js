@@ -1,30 +1,16 @@
 var db = require("../models");
-var express = require('express');
-var router = express.Router();
 var passport = require("../config/passport");
-//passport.authenticate("local"), 
 
-  router.post("/login", function(req, res, next) {
-    passport.authenticate("local", (err, user, info)=>{
-      if (err) { return next(err); }
-      if (!user) { return res.json({auth: false}); }
-      req.logIn(user, function(err) {
-          if (err) { return next(err); }
-          
-          return res.json({isUser : true, user: user});
-        });
-    })(req, res,next);
-
- 
+module.exports = function(app) {
+  app.post("/api/login", passport.authenticate("local"), function(req, res) {
+    res.json("/members");
   });
 
-  router.post("/signup", function(req, res) {
+  app.post("/api/signup", function(req, res) {
     console.log(req.body);
     db.User.create({
       email: req.body.email,
-      password: req.body.password,
-      firstname: req.body.firstname,
-      lastname: req.body.lastname
+      password: req.body.password
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
@@ -33,12 +19,12 @@ var passport = require("../config/passport");
     });
   });
 
-  router.get("/logout", function(req, res) {
+  app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
   });
 
-  router.get("/user_data", function(req, res) {
+  app.get("/api/user_data", function(req, res) {
     if (!req.user) {
       res.json({});
     }
@@ -50,4 +36,4 @@ var passport = require("../config/passport");
     }
   });
 
-module.exports = router
+};
