@@ -27,7 +27,10 @@ $(document).ready(function() {
       $.post("/api/signup", {
         email: email,
         password: password
-      }).then(function(data) {
+      })
+      
+      //technically below not needed
+      .then(function(data) {
         window.location.replace(data);
       }).catch(handleLoginErr);
     }
