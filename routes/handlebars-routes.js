@@ -6,15 +6,14 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function (app) {
 
     app.get("/", function (req, res) {
-        if (req.user) {
-            res.redirect("/members");
-        }
-        res.render("signup");
+         res.redirect("/login");
+        //  res.end();
     },
 
         app.get("/login", function (req, res) {
             if (req.user) {
                 res.redirect("/members");
+                return;
             }
             res.render("login");
         },
@@ -28,6 +27,7 @@ module.exports = function (app) {
                 app.get("/signup", function (req, res) {
                     if (req.user) {
                         res.redirect("/members");
+                        return;
                     }
                     res.render("signup");
                 },
@@ -42,32 +42,32 @@ module.exports = function (app) {
                     //   res.render("cards");
                     // },
 
-                    app.get("/module-html", function (req, res) {
+                    app.get("/module-html", isAuthenticated, function (req, res) {
 
                         res.render("module-html");
                     },
 
-                        app.get("/module-css", function (req, res) {
+                        app.get("/module-css", isAuthenticated, function (req, res) {
 
                             res.render("module-css");
                         },
 
-                            app.get("/module-javascript", function (req, res) {
+                            app.get("/module-javascript", isAuthenticated, function (req, res) {
 
                                 res.render("module-javascript");
                             },
 
-                                app.get("/module-jquery", function (req, res) {
+                                app.get("/module-jquery",isAuthenticated, function (req, res) {
 
                                     res.render("module-jquery");
                                 },
 
-                                    app.get("/module-api", function (req, res) {
+                                    app.get("/module-api",isAuthenticated, function (req, res) {
 
                                         res.render("module-api");
                                     },
 
-                                        app.get("/module-git", function (req, res) {
+                                        app.get("/module-git", isAuthenticated, function (req, res) {
 
                                             res.render("module-git");
                                         },

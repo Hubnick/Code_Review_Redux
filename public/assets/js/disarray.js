@@ -3,6 +3,16 @@
 // ----------------------------------------------------------------------------------------------------
 // ---------(Landing page)
 
+function goHome() {
+    (window.location.replace("/"));
+};
+
+function logout() {
+    (window.location.replace("/logout"));
+};
+
+
+
  function initiate () {
 
     var url = window.location.pathname;
