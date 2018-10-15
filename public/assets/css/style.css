@@ -59,7 +59,7 @@ button {
     height: 100%;
     text-align: center;
     padding: 10px;
-    font-size: large;
+    font-size: x-large;
 }
 
 #cardContain {
@@ -68,9 +68,9 @@ button {
     height: 400px; */
     overflow: auto;
     cursor: pointer;
-    height: 280px;
-    width: 700px;
-    margin-left: 230px;
+    height: 300px;
+    width: 960px;
+    margin-left: auto;
     background-color: #14395a;
     color: #b0a06f;
 }
@@ -307,9 +307,9 @@ h4 {
 }
 
 .row .col.s12.card-panel {
-    width: 70%;
+    width: 96%;
     height: 80px;
-    margin-left: 230px;
+    margin-left: auto;
     left: auto;
     right: auto;
 }
@@ -318,7 +318,8 @@ h4 {
     float: right;
     width: 960px;
     margin: 15px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 45px;
     padding: 20px;
     border-radius: 25px;
     background-color: #14395a;
@@ -329,7 +330,8 @@ h4 {
     float: right;
     width: 960px;
     margin: 15px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 45px;
     padding: 20px;
     border-radius: 25px;
     background-color: #14395a;
