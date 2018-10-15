@@ -3,11 +3,11 @@ button:visited {
 }
 
 button:hover {
-    background-color: #e3dccc;
+    background-color: white;
 }
 
 button:active {
-    background-color: #e3dccc;
+    background-color: white;
 }
 
 button:focus {
@@ -21,6 +21,7 @@ button:focus {
     border-left-color: #e3dccc;
     border-width: 5px;
     color: #14395a;
+    background-color: #e3dccc;
 }
 
 .card-panel {
@@ -58,8 +59,7 @@ button {
     height: 100%;
     text-align: center;
     padding: 10px;
-    font-size: xx-large;
-
+    font-size: large;
 }
 
 #cardContain {
@@ -71,6 +71,8 @@ button {
     height: 280px;
     width: 700px;
     margin-left: 230px;
+    background-color: #14395a;
+    color: #b0a06f;
 }
 
 button {
@@ -188,7 +190,7 @@ button {
     }
 }
 
-nav{
+nav {
     background-color: #14395a !important;
 }
 
@@ -198,7 +200,7 @@ nav{
     margin: 10px;
     top: 0;
     left: 0;
-    float:left;
+    float: left;
 }
 
 .container {
@@ -213,28 +215,30 @@ nav{
 }
 
 h2 {
-    font-size: 15px;  
-    margin: 0;  
+    font-size: 15px;
+    margin: 0;
 }
 
-h1{
+h1 {
     font-size: 20px;
 }
 
 .row .col.s5 {
     width: 300px;
-    height:100px;
+    height: 100px;
     margin-left: 200px;
     left: auto;
     right: 100px;
 }
 
-h1.center-align.QA{
-font-size: 3rem;
-margin-top: 10px;
+h1.center-align.QA {
+    font-size: 3rem;
+    margin-top: 10px;
 }
 
-.btn, .btn-large, .btn-small{
+.btn,
+.btn-large,
+.btn-small {
     background-color: #14395a !important;
     font-size: 18px;
     font-family: 'Work Sans' !important;
@@ -247,7 +251,7 @@ margin-top: 10px;
     color: white;
 }
 
-.modal-close.waves-effect.waves-green.btn-flat{
+.modal-close.waves-effect.waves-green.btn-flat {
     text-align: center;
     width: 100px;
     margin: 0 auto;
@@ -258,11 +262,11 @@ margin-top: 10px;
     font-weight: bold;
 }
 
-h4{
+h4 {
     color: #b0a06f;
 }
 
-.container-avatar{
+.container-avatar {
     /* position: absolute;
     right: 200px;
     width: 500px;
@@ -282,11 +286,11 @@ h4{
     font-family: 'Work Sans' !important;
 }
 
-.secondary-content{
-  color: #14395a;
+.secondary-content {
+    color: #14395a;
 }
 
-.navbar.navbar-light.bg-light{
+.navbar.navbar-light.bg-light {
     background-color: #14395a !important;
     /* margin: 500px; */
     margin: 650px;
@@ -302,10 +306,41 @@ h4{
     padding-left: -10px !important;
 }
 
-.row .col.s12.card-panel.flashcards{
+.row .col.s12.card-panel {
     width: 70%;
     height: 80px;
     margin-left: 230px;
     left: auto;
     right: auto;
 }
+
+.container-login {
+    float: right;
+    width: 960px;
+    margin: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: #14395a;
+    color: #b0a06f;
+}
+
+.container-signup {
+    float: right;
+    width: 960px;
+    margin: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: #14395a;
+    color: #b0a06f;
+}
+
+#email-input {
+    color: white;
+}
+
+#password-input {
+    color: white;
+}
+

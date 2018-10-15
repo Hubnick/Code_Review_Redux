@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------------------------------
 // ---------(Landing page)
 
- function initiate () {
+function initiate () {
 
     var url = window.location.pathname;
     console.log(url);
@@ -353,5 +353,3 @@ $("#reviewContain").on("click", "#review, #understand", function (event) {
         $("div.answer").html("<b>Answer</b><br><br><br>" + moduleJson[count].answer);
     }
 });
-
-     
